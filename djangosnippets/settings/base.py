@@ -62,7 +62,12 @@ INSTALLED_APPS = (
     'ratings',
     'taggit',
     'captcha',
+    'debug_toolbar',
 )
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
 
 MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
@@ -76,6 +81,7 @@ MIDDLEWARE = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'ratelimitbackend.middleware.RateLimitMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATES = [{
